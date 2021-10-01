@@ -1,0 +1,264 @@
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.accordionCC .panel {
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.accordionCC .panel-heading {
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+}
+.accordionCC .panel-title a {
+  display: block;
+  padding: 20px 35px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #00a9a4;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.accordionCC .panel-title a:after,
+.accordionCC .panel-title a.collapsed:after {
+  content: '\f068';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  width: 40px;
+  height: 40px;
+  line-height: 32px;
+  border-radius: 50%;
+  background: #00a9a4;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  transition: all 0.3s ease 0s;
+}
+.accordionCC .panel-title a.collapsed:after {
+  content: '\f067';
+}
+.accordionCC .panel-title a:hover:after,
+.accordionCC .panel-title a.collapsed:hover:after {
+  transform: rotate(360deg);
+}
+.accordionCC .panel-body {
+  padding: 15px 25px;
+  background: transparent;
+  font-size: 14px;
+  color: #8c8c8c;
+  line-height: 25px;
+  border-top: none;
+  position: relative;
+}
+.accordion-inner .panel {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin-top: 0;
+}
+.accordion-inner .panel-heading {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+.accordion-inner .panel-title a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #e55a55;
+  padding: 15px 48px 15px 20px;
+  background: #f7c59f;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.accordion-inner .panel-title a.collapsed {
+  color: white;
+  background: #e55a55;
+  border-bottom: 1px solid #3d3537;
+}
+.accordion-inner .panel-title a:after,
+.accordion-inner .panel-title a.collapsed:after {
+  display: none;
+}
+.accordion-inner .panel-title a.collapsed:after {
+  background: #e55a55;
+}
+.accordion-inner .panel-title a:before,
+.accordion-inner .panel-title a.collapsed:before {
+  content: '\f068';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background: #e55a55;
+  position: absolute;
+  top: 12px;
+  right: 19px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.accordion-inner .panel-title a.collapsed:before {
+  content: '\f067';
+  color: #e16b47;
+  background: #f7c59f;
+}
+.accordion-inner .panel-body {
+  color: #f7c59f;
+  padding: 20px 50px 15px 20px;
+  line-height: 25px;
+  border: none;
+  position: relative;
+}
+.accordion-inner .panel-body:after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 100%;
+  background: #f7c59f;
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+
+/*almost everything here is em based*/
+@import url(https://fonts.googleapis.com/css?family=Crete + Round);
+
+html {
+  font-size: 1em;
+}
+
+a {
+  color: #825582;
+  text-decoration: none;
+}
+
+.content {
+  background: #f9f9f9;
+  width: 80%;
+  max-width: 960px;
+  min-height: 3.75em;
+  margin-top: 50px;
+  padding: 1.25em;
+  border-radius: 0.313em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  line-height: 1.5em;
+  color: #292929;
+}
+
+.ribbon {
+  position: relative;
+  padding: 0 0.5em;
+  font-size: 2em;
+  margin: 0 0 30px -0.625em;
+  line-height: 1.875em;
+  color: #e6e2c8;
+  border-radius: 0 0.156em 0.156em 0;
+  background: #b71616;
+  box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ribbon:before,
+.ribbon:after {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+.ribbon:before {
+  width: 0.469em;
+  height: 100%;
+  padding: 0 0 0.438em;
+  top: 0;
+  left: -0.469em;
+  background: inherit;
+  border-radius: 0.313em 0 0 0.313em;
+}
+
+.ribbon:after {
+  width: 0.313em;
+  height: 0.313em;
+  background: rgba(0, 0, 0, 0.35);
+  bottom: -0.313em;
+  left: -0.313em;
+  border-radius: 0.313em 0 0 0.313em;
+  box-shadow: inset -1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.flecha {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875em;
+  }
+
+  .accordion-inner .panel-body:after {
+    content: none;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .flecha {
+    display: block;
+    color: black;
+  }
+
+  .flecha .fa-arrow-left {
+    margin-right: 10px;
+  }
+
+  .flecha .fa-arrow-right {
+    margin-left: 10px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .accordionCC .panel-body {
+    padding: 15px 0px;
+  }
+
+  .ribbon {
+    line-height: 1.143em;
+    padding: 0.5em;
+  }
+
+  .ribbon:before,
+  .ribbon:after {
+    font-size: 0.714em;
+  }
+}
+
+.row-detalle {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sinDeuda {
+  color: green;
+}
+
+.conDeuda {
+  color: red;
+}

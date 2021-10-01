@@ -1,0 +1,37 @@
+{
+  "name": "rest.api.test",
+  "version": "1.0.0",
+  "description": "TGroup REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./server.js",
+    "test": "cross-env NODE_ENV=test mocha tests/api.test --exit"
+  },
+  "author": "Alan Peralta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.19.0",
+    "https": "^1.0.0",
+    "morgan": "^1.9.1",
+    "mssql": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "chai": "*",
+    "mocha": "*",
+    "nodemon": "^1.19.4",
+    "supertest": "^6.1.6"
+  }
+}
